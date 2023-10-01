@@ -4,11 +4,11 @@ export default function bubble_sort(arr: number[]): void {
     let len = arr.length;
     let temp;
     for(i = 0; i < len; i++) {
-        for(j = i; j < len; j++) {
-            if (arr[j] < arr[i]) {
-                temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
+        for(j = 0; j < len-1-i; j++) {
+            if (arr[j] > arr[j+1]) {
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
             }
         }
     }
